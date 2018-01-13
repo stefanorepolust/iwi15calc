@@ -52,8 +52,18 @@ public class CalculatorTest {
 		assertEquals(3, result, 0);
 
 	}
-	
-	
+
+	@Test
+	public void testSimpleModOperation() throws Exception {
+
+		Calculator calc = new CalculatorImpl();
+		calc.push(7.0);
+		calc.push(2);
+		double result = calc.perform(Operation.mod);
+
+		assertEquals(1, result, 0);
+
+	}
 	
 	
 
